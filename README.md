@@ -378,28 +378,5 @@ The MVC-Like structure separates parts of the backend into manageable and mainta
 
 [JWT](https://jwt.io/) was chosen as the authentication method as they are lightweight and do not take up space on server memory, instead they are stored client side and allows the server to horizontally scale easier as opposed to sessions. Only issue is the security vulnerability against XSS attacks where a malicious client may abuse the token. This is why I enforced a short expiry time, only use server-side validation for requests and am looking into storing the token in an httpOnly cookie as opposed to in localStorage where it can be easily read by malicious javascript injections.
 
-**Testing Strategy**
 
-No current testing strategy for the backend portion of this application.
 
-*Future Plans To Improve Testing Strategy*
-
-- Implement unit, integration and e2e tests starting from small units and using those tests to build up to critical features.
-
-## Demo GIFs
-
-**Home Page**
-
-![Home Page](./demo_gifs/MockStocksHomePage.gif "Home Page")
-
-**Browsing Markets**
-
-![Markets](./demo_gifs/MockStocksBrowsing.gif "Markets")
-
-**Buying A Stock**
-
-![Buying](./demo_gifs/MockStocksBuying.gif "Buying")
-
-**User Settings and Logging**
-
-![Settings](./demo_gifs/MockStocksSettings.gif "Settings")
